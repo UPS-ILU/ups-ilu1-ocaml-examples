@@ -1,5 +1,7 @@
 ### OCaml ###
 ._d/
+._bcdi/
+._ncdi/
 *.exe
 
 *.annot
