@@ -14,7 +14,9 @@ Il contient :
 Pour tout compiler, lancer dans un terminal Linux ou macOS (ou dans WSL sous Windows),
 
 ```bash
+opam install csv
+
 cd ocaml-cli/
 make
-./main.exe 10 20
+./main.exe 10 20  # pour tester sur un exemple
 ```

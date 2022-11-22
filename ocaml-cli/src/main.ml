@@ -1,5 +1,6 @@
-(* Définit la fonction main communiquant avec la ligne de commande *)
-let main () =
+(* Définit une première procédure - programme lisant la ligne de commande *)
+let main_sumavg () =
+
   let _, l1, l2 = Parse_cli.get_args () in
 
   (* s'il y avait un "--" dans les arguments en ligne de commande,
@@ -17,5 +18,18 @@ let main () =
 
   print_endline text
 
-(* Exécute la fonction main *)
-let _ = main ()
+(* Définit une autre procédure - programme lisant/écrivant un CSV *)
+let main_csv_demo () =
+  let chemin = Libunix.get_example_file "musee.csv" in
+  let output = Libunix.get_example_file "musee_output.csv" in
+  let csv = Libcsv.load_csv chemin in
+  let csv' = Libcsv.map_csv (fun s -> "Super-" ^ s) csv in
+  let nl, nc = Libcsv.lines_columns csv' in
+  let () = Format.printf "Ecriture d'un CSV de taille (%d x %d) dans: %s\n" nl nc output in
+  Libcsv.save_csv output csv'
+
+(* Exécute les procédures précédentes *)
+
+let () = main_sumavg ()
+
+let () = main_csv_demo ()
