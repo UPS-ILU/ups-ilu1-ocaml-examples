@@ -1,4 +1,6 @@
 ### OCaml ###
+._d/
+
 *.annot
 *.cmo
 *.cma
