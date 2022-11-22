@@ -1,0 +1,28 @@
+name: "ocaml-cli"
+license: "MIT"
+version: "dev"
+
+synopsis: "OCaml-CLI demo"
+description: """
+OCaml-CLI demo - this opam file is mostly useful to install the dependencies
+"""
+
+homepage: "https://github.com/UPS-ILU"
+dev-repo: "git+https://github.com/UPS-ILU/ups-ilu1-ocaml-examples.git"
+bug-reports: "https://github.com/UPS-ILU/ups-ilu1-ocaml-examples/issues"
+
+depends: [
+  "ocaml"
+  "csv"
+]
+build: [
+  [make]
+]
+install: ["sh" "-c" "echo Install nothing"]
+
+opam-version: "2.0"
+
+authors: [
+  "Erik Martin-Dorel"
+]
+maintainer: "Erik Martin-Dorel <erik.martin-dorel@irit.fr>"
