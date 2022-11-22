@@ -1,5 +1,6 @@
 ### OCaml ###
 ._d/
+*.exe
 
 *.annot
 *.cmo
