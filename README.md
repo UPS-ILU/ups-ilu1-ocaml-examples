@@ -41,9 +41,7 @@ if [ -e .opam ]; then echo OK--Sauter-cette-étape; else opam init --auto-setup 
 Pour tout compiler, ouvrir un terminal Linux ou macOS (ou WSL sous Windows) et faire :
 
 ```bash
-opam install csv  # pour installer les dépendances
-
+opam install csv # installe le paquet "csv" (dépendance du projet)
 cd ocaml-cli/
-make
-./main.exe 10 20  # pour compiler/lancer le projet
+make && ./main.exe 10 20 # compile et lance le programme en lui passant 10 et 20
 ```
