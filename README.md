@@ -20,7 +20,7 @@ recommandons d'installer `opam` et `tuareg` :
 * Machines de TP de l'UPS → `opam` est préinstallé, faire
   ```bash
   cd ~/
-  if [ -e .emacs ]; then mv -fv .emacs .emacs~
+  if [ -e .emacs ]; then mv -fv .emacs .emacs~; fi
   curl -fOL https://github.com/erikmd/tapfa-init.el/raw/master/.emacs
   emacs test.ml &
   ```
