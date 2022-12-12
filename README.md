@@ -41,7 +41,9 @@ if [ -e .opam ]; then echo OK--Sauter-cette-étape; else opam init --auto-setup 
 Pour tout compiler, ouvrir un terminal Linux ou macOS (ou WSL sous Windows) et faire :
 
 ```bash
-opam install csv # installe le paquet "csv" (dépendance du projet)
+opam install ocamlfind csv  # installe les 2 paquets OCaml dont dépend le projet
+eval $(opam env)
+
 cd ocaml-cli/
-make && ./main.exe 10 20 # compile et lance le programme en lui passant 10 et 20
+make && ./main.exe 10 20  # compile et lance le programme en lui passant 10 et 20
 ```
